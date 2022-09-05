@@ -1,5 +1,5 @@
 # Smart Internet detector
-The best interest detector you can ver and so very easy to implement in your project
+The best interest detector you can find on the net and it's very easy to implement in your project
 
 [![Logo](https://github.com/Andrew-9/Internet-detector/blob/main/Internet%20connected.png)](https://github.com/Andrew-9/Internet-detector/blob/main/Internet%20connected.png)
 [![Logo](https://github.com/Andrew-9/Internet-detector/blob/main/Internet%20disconnected.png)](https://github.com/Andrew-9/Internet-detector/blob/main/Internet%20disconnected.png)

@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", Bahnschrift;
+}
+
+body{
+    background: #f2f2f2;
+}
+
+/* .wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+.wrapper{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    animation: show_toast 1s ease forwards;
+}
+
+@keyframes show_toast {
+    0%{
+        transform: translateX(-100%);
+    }
+    40%{
+        transform: translateX(10%);
+    }
+    80%, 100%{
+        transform: translateX(20px);
+    }
+}
+
+.wrapper.hide{
+    animation: hide_toast 1s ease forwards;
+}
+
+@keyframes hide_toast {
+    0%{
+        transform: translateX(20px);
+    }
+    40%{
+        transform: translateX(10%);
+    }
+    80%, 100%{
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(-100%);
+    }
+}
+
+.wrapper .toast{
+    background: #fff;
+    padding: 20px 15px 20px 20px;
+    border-radius: 10px;
+    width: 460px;
+    display: flex;
+    align-items: center;
+    border-left: 5px solid #FF0070;
+    justify-content: space-between;
+    box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
+}
+
+.wrapper .toast.offline{
+    border-color: #ccc;
+}
+
+.toast .content{
+    display: flex;
+    align-items: center;
+}
+
+.toast .content .icon{
+    font-size: 25px;
+    background: #FF0070;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.toast.offline .content .icon{
+    background: #ccc;
+}
+
+.toast .content .icon svg{
+    fill: #fff;
+    height: 26px;
+    width: 26px;
+    margin-top: 12px;
+}
+
+.toast .content .details{
+    margin-left: 15px;
+}
+
+.content .details span{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content .details p{
+    color: #878787;
+}
+
+.toast .close-icon{
+    background: #f2f2f2;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 23px;
+    cursor: pointer;
+    color: #878787;
+    border-radius: 50%;
+}
+
+.toast .close-icon svg{
+    fill: rgb(112, 112, 112);
+    height: 26px;
+    width: 26px;
+    margin-top: 5px;
+}
